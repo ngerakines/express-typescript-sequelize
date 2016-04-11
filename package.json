@@ -1,0 +1,61 @@
+{
+  "name": "express-typescript-sequelize",
+  "version": "1.0.0",
+  "description": "A proof of concept.",
+  "main": "bld/app.js",
+  "scripts": {
+    "lint": "tslint -c ./tslint.json -t verbose src/**/*.ts",
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -x *.spec.js -- --reporter spec",
+    "posttest": "istanbul check-coverage --statements 50 --functions 50 --lines 50",
+    "start": "node bld/app.js | bunyan --no-color --no-pager -0",
+    "clean": "rimraf bld coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngerakines/express-typescript-sequelize"
+  },
+  "author": "Nick Gerakines",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/ngerakines/express-typescript-sequelize/issues"
+  },
+  "homepage": "https://github.com/ngerakines/express-typescript-sequelize#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
+    "mocha-junit-reporter": "^1.10.0",
+    "request-promise": "^2.0.1",
+    "rimraf": "^2.5.2",
+    "source-map-support": "^0.4.0",
+    "tslint": "^3.7.1",
+    "typemoq": "0.0.6",
+    "typescript": "^1.8.9"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "bluebird": "^3.3.4",
+    "body-parser": "^1.15.0",
+    "bunyan": "^1.8.0",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^3.0.2",
+    "consolidate": "^0.14.0",
+    "cookie-parser": "^1.4.1",
+    "dustjs-linkedin": "^2.7.2",
+    "ect": "^0.5.9",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "lodash": "^4.9.0",
+    "method-override": "^2.3.5",
+    "moment": "^2.12.0",
+    "node-uuid": "^1.4.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg": "^4.5.3",
+    "request-promise": "^2.0.1",
+    "sequelize": "^3.21.0"
+  }
+}

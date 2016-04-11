@@ -1,0 +1,49 @@
+{>"partials/header"/}
+{>"partials/loggedin"/}
+<div class="row">
+    <div class="col-md-8">
+        <h2>Welcome</h2>
+        <p class="lead">This is an example TypeScript express application using sequelize and postgres.</p>
+    </div>
+    <div class="col-md-4">
+        <form method="post" action="/login">
+        <div class="form-group" style="margin-top: 20px;">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" name="username" placeholder="Email"{?account} disabled{/account}>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password"{?account} disabled{/account}>
+        </div>
+        <button type="submit" class="btn btn-primary btn-striped"{?account} disabled{/account}>Login</button>
+        </form>
+        <p><a href="#register">Register</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p class="lead" style="padding-top:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in porttitor dolor, pellentesque facilisis enim. Cras sed porttitor mauris. Nam malesuada dui non rutrum mollis. Integer euismod diam magna, non pulvinar neque vulputate sit amet. Proin magna urna, tempus vel consectetur ut, venenatis vel nisl. Duis non suscipit arcu, nec dapibus libero. Sed nec arcu nunc. Aliquam hendrerit, nisi sit amet sollicitudin convallis, enim purus tempus nulla, at porttitor est sem nec dolor. Integer quis tortor non nisi blandit tempor ac quis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p>Nulla dictum augue sem, ut dapibus turpis condimentum at. Nullam aliquet mauris magna. Maecenas tristique facilisis diam sed elementum. Mauris dapibus malesuada bibendum. Vivamus pulvinar aliquet quam in dignissim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque ex velit, pulvinar vel nisl ut, laoreet fermentum arcu.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a name="register"></a>
+        <form method="post" action="/register">
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" name="name" id="inputName" placeholder="John Smith"{?account} disabled{/account}>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" name="email" id="inputEmail" placeholder="john@smith.me"{?account} disabled{/account}>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPassword" placeholder="password"{?account} disabled{/account}>
+            </div>
+            <button type="submit" class="btn btn-default"{?account} disabled{/account}>Register</button>
+        </form>
+    </div>
+</div>
+{>"partials/footer"/}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "noResolve": false,
+    "experimentalDecorators": true,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "sourceMap": true,
+    "sourceRoot": "src",
+    "outDir": "bld"
+  },
+  "exclude": [
+    "bld",
+    "node_modules"
+  ]
+}

@@ -1,0 +1,5 @@
+{?account}
+    <div class="alert alert-info" role="alert">
+        <strong>You are logged in as {#account}{email}{/account}</strong> You can visit <a href="/settings">Account Settings</a> or <a href="/logout">logout</a>.
+    </div>
+{/account}

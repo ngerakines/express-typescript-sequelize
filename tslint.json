@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "class-name": true,
+    "curly": true,
+    "eofline": true,
+    "indent": "tabs",
+    "label-position": true,
+    "label-undefined": true,
+    "member-ordering": [true,
+      "public-before-private",
+      "static-before-instance",
+      "variables-before-functions"
+    ],
+    "no-consecutive-blank-lines": true,
+    "no-empty": true,
+    "no-eval": true,
+    "no-unreachable": true,
+    "no-unused-expression": true,
+    "no-unused-variable": true,
+    "semicolon": "always",
+    "triple-equals": [true, "allow-null-check"],
+    "variable-name": [true, "check-format"]
+  }
+}

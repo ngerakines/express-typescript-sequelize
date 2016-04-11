@@ -1,0 +1,46 @@
+{>"partials/header"/}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Account Settings</h2>
+        <p>This area is only accessible when you are logged in.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            {#addresses}
+                <tr>
+                    <td>{street}</td>
+                    <td>{city}</td>
+                    <td>{state}</td>
+                    <td>{zip}</td>
+                </tr>
+            {/addresses}
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a name="register"></a>
+        <form method="post" action="/settings/address">
+            <div class="form-group">
+                <label for="inputStreet">Street</label>
+                <input type="text" class="form-control" name="street" id="inputStreet" />
+            </div>
+            <div class="form-group">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" name="city" id="inputCity" />
+            </div>
+            <div class="form-group">
+                <label for="inputState">State</label>
+                <input type="text" class="form-control" name="state" id="inputState" />
+            </div>
+            <div class="form-group">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" name="zip" id="inputZip" />
+            </div>
+            <button type="submit" class="btn btn-default">Create</button>
+        </form>
+    </div>
+</div>
+{>"partials/footer"/}
