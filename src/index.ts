@@ -41,7 +41,6 @@ export function configureExpress(logger:Logger, storageManager:StorageManager):P
             app.set("view engine", "dust");
 
             app.use(express.static(__dirname + "/../public"));
-            app.use("/", express.static(__dirname + "/../public/index.html"));
 
             passport.use(new LocalStrategy(
                 function(username, password, done) {
@@ -103,7 +102,6 @@ export function congifureRoutes(app:express.Application, logger:Logger, storageM
     return new Promise((resolve) => {
         let applicationController = new ApplicationController(logger, storageManager);
         app.get("/", applicationController.home);
-        app.get("/register", applicationController.register);
         app.post("/register", applicationController.completeRegistration);
         app.post("/login",
             passport.authenticate("local", { successRedirect: "/settings",

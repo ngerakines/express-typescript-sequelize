@@ -48,10 +48,6 @@ export class ApplicationController extends BaseController {
         res.render("index", view);
     };
 
-    register = (req:express.Request, res:express.Response) => {
-        res.render("register");
-    };
-
     completeRegistration = (req:express.Request, res:express.Response) => {
         this.storageManager
             .register(req.body.name, req.body.email, req.body.password)
@@ -87,7 +83,7 @@ export class ApplicationController extends BaseController {
     addAddress = (req:express.Request, res:express.Response) => {
         this.storageManager
             .addAddress(req.user, req.body.street, req.body.city, req.body.state, req.body.zip)
-            .then((account) => {
+            .then(() => {
                 req.flash("message", "Created address!");
                 return res.redirect("/settings");
             })
